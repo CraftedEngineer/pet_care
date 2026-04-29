@@ -629,7 +629,8 @@
     }
 
     .store-map {
-      margin: 28px 0 0;
+      grid-column: 1 / -1;
+      margin: 0;
       overflow: hidden;
       background: var(--white);
       border-color: rgba(255, 255, 255, 0.18);
@@ -638,8 +639,8 @@
 
     .store-map img {
       width: 100%;
-      aspect-ratio: 16 / 10;
-      object-fit: cover;
+      height: auto;
+      object-fit: contain;
     }
 
     .booking {
