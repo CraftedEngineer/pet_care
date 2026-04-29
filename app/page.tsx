@@ -23,6 +23,15 @@ export default function Home() {
     const reviewDots = Array.from(root.querySelectorAll<HTMLButtonElement>(reviewDotSelector));
     const bookingForm = root.querySelector<HTMLFormElement>("#bookingForm");
     const formStatus = root.querySelector<HTMLElement>("#formStatus");
+    const bookingArrivalInput = bookingForm?.querySelector<HTMLInputElement>('input[name="arrivalTime"]');
+    if (bookingArrivalInput) {
+      const tomorrowMorning = new Date();
+      tomorrowMorning.setDate(tomorrowMorning.getDate() + 1);
+      tomorrowMorning.setHours(9, 30, 0, 0);
+      const localDatetime = `${tomorrowMorning.getFullYear()}-${String(tomorrowMorning.getMonth() + 1).padStart(2, "0")}-${String(tomorrowMorning.getDate()).padStart(2, "0")}T${String(tomorrowMorning.getHours()).padStart(2, "0")}:${String(tomorrowMorning.getMinutes()).padStart(2, "0")}`;
+      bookingArrivalInput.value = localDatetime;
+    }
+
     let environmentIndex = 0;
     let reviewIndex = 0;
     let environmentTimer: number | undefined;

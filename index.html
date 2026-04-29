@@ -1184,6 +1184,15 @@
     let environmentIndex = 0;
     let environmentTimer;
 
+    const arrivalInput = bookingForm.querySelector('input[name="arrivalTime"]');
+    if (arrivalInput) {
+      const tomorrowMorning = new Date();
+      tomorrowMorning.setDate(tomorrowMorning.getDate() + 1);
+      tomorrowMorning.setHours(9, 30, 0, 0);
+      const localDatetime = `${tomorrowMorning.getFullYear()}-${String(tomorrowMorning.getMonth() + 1).padStart(2, "0")}-${String(tomorrowMorning.getDate()).padStart(2, "0")}T${String(tomorrowMorning.getHours()).padStart(2, "0")}:${String(tomorrowMorning.getMinutes()).padStart(2, "0")}`;
+      arrivalInput.value = localDatetime;
+    }
+
     function showEnvironmentSlide(index) {
       environmentIndex = index;
       environmentSlides.forEach((slide, slideIndex) => {
