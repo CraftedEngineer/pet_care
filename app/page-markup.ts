@@ -329,6 +329,10 @@ export const pageMarkup = `<header class="site-header">
               </select>
             </label>
             <label class="wide">
+              期望到店时间
+              <input type="datetime-local" name="arrivalTime">
+            </label>
+            <label class="wide">
               备注
               <textarea name="message" placeholder="例如宠物体重、是否怕吹风、是否打结"></textarea>
             </label>

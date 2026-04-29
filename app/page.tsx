@@ -59,8 +59,13 @@ export default function Home() {
 
     const handleBookingSubmit = (event: SubmitEvent) => {
       event.preventDefault();
+      const formData = bookingForm ? new FormData(bookingForm) : undefined;
+      const arrivalTime = formData?.get("arrivalTime");
       if (formStatus) {
-        formStatus.textContent = "预约信息已记录，门店会尽快与您确认时间。";
+        const timeText = typeof arrivalTime === "string" && arrivalTime
+          ? `，期望到店时间为 ${arrivalTime.replace("T", " ")}`
+          : "";
+        formStatus.textContent = `预约信息已记录${timeText}，门店会尽快与您确认。`;
       }
       bookingForm?.reset();
     };
