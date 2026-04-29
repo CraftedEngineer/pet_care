@@ -261,23 +261,80 @@ export const pageMarkup = `<header class="site-header">
         <p>我们重视宠物的情绪，也重视主人的信任。每一次护理都尽量减少等待、减少噪音、减少不确定。</p>
       </div>
 
-      <div class="reviews">
-        <article class="card review large">
-          <h3>“我家比熊以前洗澡会一直发抖，这次护理师先陪它熟悉环境，洗完状态很放松。”</h3>
-          <p>毛发吹得很蓬松，脸型也修得自然。最喜欢的是结束后会告诉我耳朵和皮肤情况，感觉不是流水线服务。</p>
-          <strong>小桃主人</strong>
-        </article>
-        <div class="step-list">
-          <article class="card review">
-            <h3>“长毛猫开结处理很耐心。”</h3>
-            <p>没有一上来就建议剃毛，会先解释哪些地方能保留，哪些地方需要处理。</p>
-            <strong>奶盖主人</strong>
+      <div class="reviews-carousel" aria-live="polite">
+        <div class="review-slides">
+          <article class="review-slide is-active" data-review-slide>
+            <div class="review-copy">
+              <span class="review-rating" aria-label="五星评价">★★★★★</span>
+              <h3>“我家比熊以前洗澡会一直发抖，这次护理师先陪它熟悉环境，洗完状态很放松。”</h3>
+              <p>毛发吹得很蓬松，脸型也修得自然。最喜欢的是结束后会告诉我耳朵和皮肤情况，感觉不是流水线服务。</p>
+              <strong>小桃主人 · 比熊</strong>
+            </div>
+            <div class="review-detail">
+              <span>回访记录</span>
+              <p>连续预约 6 次，固定同一位护理师，近期打结和泪痕情况明显减轻。</p>
+            </div>
           </article>
-          <article class="card review">
-            <h3>“预约时间准，不用排很久。”</h3>
-            <p>接送也很方便，洗完香味清爽，不会特别刺鼻。</p>
-            <strong>豆豆主人</strong>
+
+          <article class="review-slide" data-review-slide>
+            <div class="review-copy">
+              <span class="review-rating" aria-label="五星评价">★★★★★</span>
+              <h3>“长毛猫开结处理很耐心，没有一上来就建议剃毛。”</h3>
+              <p>护理师会先解释哪些地方能保留，哪些地方需要处理。吹风的时候也会停下来安抚，猫咪回家没有躲起来。</p>
+              <strong>奶盖主人 · 布偶猫</strong>
+            </div>
+            <div class="review-detail">
+              <span>护理重点</span>
+              <p>耳后、腋下、尾根分区开结，搭配低噪吹干和护毛喷雾。</p>
+            </div>
           </article>
+
+          <article class="review-slide" data-review-slide>
+            <div class="review-copy">
+              <span class="review-rating" aria-label="五星评价">★★★★★</span>
+              <h3>“预约时间准，不用排很久，接送也很方便。”</h3>
+              <p>洗完香味很清爽，不会特别刺鼻。店员还拍了洗护前后的照片，接回家一看爪垫和耳朵都处理得很干净。</p>
+              <strong>豆豆主人 · 柯基</strong>
+            </div>
+            <div class="review-detail">
+              <span>主人最满意</span>
+              <p>准点接待、结束提醒及时，适合工作日临时安排护理。</p>
+            </div>
+          </article>
+
+          <article class="review-slide" data-review-slide>
+            <div class="review-copy">
+              <span class="review-rating" aria-label="五星评价">★★★★★</span>
+              <h3>“老年犬洗护让我最担心，但这次全程都很稳。”</h3>
+              <p>会主动问心脏和关节情况，吹干没有一直强吹。结束后还提醒我最近皮肤有点干，回去少用太热的水。</p>
+              <strong>团团主人 · 11岁博美</strong>
+            </div>
+            <div class="review-detail">
+              <span>特别照顾</span>
+              <p>缩短站立时间，分段休息，洗护后同步关节、皮肤和指甲状态。</p>
+            </div>
+          </article>
+
+          <article class="review-slide" data-review-slide>
+            <div class="review-copy">
+              <span class="review-rating" aria-label="五星评价">★★★★★</span>
+              <h3>“第一次做造型修剪，沟通比我想象得细。”</h3>
+              <p>会拿照片确认想要的圆脸效果，也会说明毛量不够的位置怎么修更自然。最后不是网红模板，是适合我家狗的样子。</p>
+              <strong>芝麻主人 · 泰迪</strong>
+            </div>
+            <div class="review-detail">
+              <span>造型反馈</span>
+              <p>脸部轮廓、四肢比例、尾巴长度在修剪前逐项确认。</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="review-controls" aria-label="客户评价轮播控制">
+          <button class="review-dot is-active" type="button" data-review-dot="0"></button>
+          <button class="review-dot" type="button" data-review-dot="1"></button>
+          <button class="review-dot" type="button" data-review-dot="2"></button>
+          <button class="review-dot" type="button" data-review-dot="3"></button>
+          <button class="review-dot" type="button" data-review-dot="4"></button>
         </div>
       </div>
     </section>
