@@ -351,9 +351,6 @@ export const pageMarkup = `<header class="site-header">
             <p><strong>联系电话：</strong>138-0000-6688</p>
             <p><strong>温馨提示：</strong>猫咪、幼宠、老年宠建议提前电话沟通状态。</p>
           </div>
-          <figure class="store-map card" aria-label="泡泡爪宠物洗护门店位置示意图">
-            <img src="/assets/store-map-ai.png" alt="泡泡爪宠物洗护位于北京市海淀区西北旺街道万家灯火大厦的可爱风格地图">
-          </figure>
         </aside>
 
         <form class="booking" action="#" method="post" id="bookingForm">
@@ -397,6 +394,10 @@ export const pageMarkup = `<header class="site-header">
           <button class="button primary" type="submit">提交预约信息</button>
           <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
         </form>
+
+        <figure class="store-map card" aria-label="泡泡爪宠物洗护门店位置示意图">
+          <img src="/assets/store-map-ai.png" alt="泡泡爪宠物洗护位于北京市海淀区西北旺街道万家灯火大厦的可爱风格地图">
+        </figure>
       </div>
     </section>
   </main>
